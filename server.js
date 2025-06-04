@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
     cors({
-        origin: https://resume-analyzer-dusky-delta.vercel.app/ || process.env.ALLOWED_ORIGIN || '*',
+        origin: "https://resume-analyzer-dusky-delta.vercel.app/" || process.env.ALLOWED_ORIGIN || '*',
         methods: ['GET','POST'],
         credentials:true,
     })
