@@ -7,13 +7,7 @@ const resumeRoutes = require('./routes/resumeRoutes');
 
 const app = express();
 
-app.use(
-    cors({
-        origin: process.env.ALLOWED_ORIGIN || '*',
-        methods: ['GET','POST'],
-        credentials:true,
-    })
-);
+app.use(cors());
 
 
 app.use(express.json());
