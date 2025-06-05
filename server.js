@@ -7,7 +7,10 @@ const resumeRoutes = require('./routes/resumeRoutes');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://resume-analyzer-front-final.onrender.com',
+}));
+
 
 
 app.use(express.json());
