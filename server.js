@@ -4,12 +4,15 @@ const cors= require('cors');
 const mongoose = require('mongoose');
 
 const resumeRoutes = require('./routes/resumeRoutes');
+const FRONTEND_URL = process.env.FRONTEND_URL;
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://resume-analyzer-front-final.onrender.com',
-}));
+app.use(
+  cors({
+    origin: FRONTEND_URL,
+  })
+);
 
 
 
