@@ -13,6 +13,9 @@ const ALLOWED_MIMES = [
     'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 ];
 
+if (!fs.existsSync(UPLOAD_DIR)) {
+  fs.mkdirSync(UPLOAD_DIR, { recursive: true });
+}
 
 
 const storage = multer.diskStorage({
