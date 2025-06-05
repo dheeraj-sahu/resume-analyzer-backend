@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
+const fs = require('fs');
 const resumeController = require('../controllers/resumeController');
 
 const UPLOAD_DIR=process.env.UPLOAD_DIR || 'uploads';
